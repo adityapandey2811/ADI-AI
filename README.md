@@ -16,3 +16,7 @@ How to run:
     
     py -m pip install speechrecognition
     py -m pip install pyaudio
+
+--> Then execute using:
+
+    python main.py
