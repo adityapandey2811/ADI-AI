@@ -1,11 +1,20 @@
 import speech_recognition as sr
 import webbrowser as wb
 
+
 def speechToText():
     v1 = sr.Recognizer()
     with sr.Microphone() as source:
-        text = v1.recognize_google(v1.listen(source)).lower()
+        try:
+            text = v1.recognize_google(v1.listen(source)).lower()
+        except sr.UnknownValueError:
+            print('Error: Unclear Pronounciation\nTry Again in a bit')
+            exit()
+        except sr.RequestError:
+            print('Error: Network Issue\nTry Again in a bit')
+            exit()
     return text
+
 
 print('Say something to search!\nLike --> "Search Dinosaurs"')
 text = speechToText()
@@ -30,7 +39,7 @@ if index == -1:
     print('Man u wasting my time\nTry again later')
     exit()
 
-text = text[index+7:]
+text = text[index + 7:]
 url = 'https://www.google.com/search?q='
-print(text)
-wb.open(url+text)
+print("Search Query: " + text)
+wb.open(url + text)
