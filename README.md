@@ -1,5 +1,5 @@
 # ADI-AI
-Very Basic AI assistant
+Very Basic AI Assistant
 
 
 How to run:
@@ -20,3 +20,11 @@ How to run:
 --> Then execute using:
 
     python main.py
+
+
+Skills:
+
+
+--> Search with Speech like "Search Dinosaurs"
+
+--> Email using Speech like "Send Email"
