@@ -1,5 +1,5 @@
 # ADI-AI
-Very Basic speech command AI
+Very Basic AI assistant
 
 
 How to run:
